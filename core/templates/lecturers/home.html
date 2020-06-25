@@ -1,0 +1,26 @@
+{% extends 'base.html'%}
+
+ {% block content%}
+
+<div class="row">
+  <div class="col-sm-6 ">
+  	<h3 class="ml-4" >{{request.user}} {{request.user.lastname}} <small class="text-success">online</small></h3>
+
+  	<!-- vertical nav -->
+ <div class="container  border-right">
+  <ul class="nav flex-column">
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'add_proj'%}">Review Students</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'communicate' %}">Message Board</a>
+    </li>
+  </ul>
+</div>
+
+  </div>
+</div>
+
+
+
+ {% endblock content%}

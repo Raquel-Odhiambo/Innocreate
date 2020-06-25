@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block content %}
+	
+<div class="container">
+	
+</div>
+
+	<div class="container">
+	<div id="messages">
+	    <div class="msg-left">
+	        <p>
+		{{chatt.mess}}
+<br> <small class="text-info">{{chatt.created_time}}</small>
+	</p>
+	    </div>
+	     <div class="msg-right">
+	        ...
+	    </div>
+	    <div class="msg-left">
+	        ...
+	    </div>
+	     <div class="msg-right">
+	      ...
+	    </div>
+	     <div class="msg-left">
+	        ...
+	    </div>
+	     <div class="msg-right">
+	       ...
+	    </div>
+	     <div class="msg-left">
+	              ...<br/>
+          	    </div>
+
+	</div>
+<a href="#">Reply</a>
+</div>
+<script>$('#messages').scrollTop($('#messages')[0].scrollHeight);</script>
+			{% endblock content %}

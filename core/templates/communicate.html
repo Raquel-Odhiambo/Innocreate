@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+
+
+
+{% block content %}
+{% for m in messagess %}
+
+<div class="card mb-2">
+	
+<div class="card-body">{{m.subject}} | From:  <span class="text-info"> <b> {{m.owner.admission_number}} | Last seen {{m.owner.last_login}}</b> </span>
+<b> <a class="text-success" href="{% url 'chat' pk=m.pk %}"> Read Now</a></b>
+</div>
+
+</div>
+{% endfor%}
+{% endblock content%}
+
